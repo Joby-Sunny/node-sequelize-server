@@ -1,0 +1,19 @@
+{
+  "name": "nodesqlserver",
+  "version": "1.0.0",
+  "description": "simple node sql server with sequelize and express",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "mistyCiera",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chalk": "^2.4.2",
+    "express": "^4.17.1",
+    "mysql2": "^1.7.0",
+    "sequelize": "^4.42.0"
+  }
+}
