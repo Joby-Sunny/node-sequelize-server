@@ -17,10 +17,7 @@ const sequelize = new Sequelize(
     console.log(chalk.green('Database Connection Successful'));
   })
   .catch(error => {
-    console.log(
-      chalk.red('Database Connection Failed'),
-      JSON.stringify(error, null, 4)
-    );
+    console.log(chalk.red('Database Connection Failed'), error);
   });
 
 module.exports = sequelize;

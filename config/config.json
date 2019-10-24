@@ -1,7 +1,7 @@
 {
   "username": "root",
   "password": "password",
-  "database": "codementor",
+  "database": "socialnetwork",
   "host": "127.0.0.1",
   "dialect": "mysql",
   "operatorsAliases": false

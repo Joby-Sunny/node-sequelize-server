@@ -1,6 +1,6 @@
 module.exports = {
-  express: require('express'),
-  bodyParser: require('body-parser'),
   chalk: require('chalk'),
-  sequelize: require('./database')
+  express: require('express'),
+  sequelize: require('./database'),
+  bodyParser: require('body-parser'),
 };
