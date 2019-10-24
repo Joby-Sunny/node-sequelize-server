@@ -1,7 +1,7 @@
 const {INTEGER, STRING} = require('sequelize');
-const {sequelize} = require('../libraries');
+const {sequelize} = require('../libraries').database;
 
-module.exports = sequelize.define('User', {
+module.exports = sequelize.define('user', {
   id: {
     type: INTEGER(11),
     primaryKey: true,

@@ -1,6 +1,13 @@
 const Sequelize = require('sequelize');
 const chalk = require('chalk');
 const config = require('./config/config');
+const database = {};
+
+function sequelizeLogging(string) {
+  console.log(
+    chalk.blue('Sequelize : ') + chalk.yellow('[' + string + ']') + '\n'
+  );
+}
 
 const sequelize = new Sequelize(
   config.database,
@@ -9,15 +16,12 @@ const sequelize = new Sequelize(
   {
     host: config.host,
     dialect: config.dialect,
-    operatorsAliases: config.operatorsAliases
+    port: config.port,
+    logging: sequelizeLogging
   }
-)
-  .authenticate()
-  .then(() => {
-    console.log(chalk.green('Database Connection Successful'));
-  })
-  .catch(error => {
-    console.log(chalk.red('Database Connection Failed'), error);
-  });
+);
 
-module.exports = sequelize;
+database['sequelize'] = sequelize;
+database['Sequelize'] = Sequelize;
+
+module.exports = database;

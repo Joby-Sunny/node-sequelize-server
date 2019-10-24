@@ -1,7 +1,7 @@
 const {INTEGER, STRING} = require('sequelize');
-const {sequelize} = require('../libraries');
+const {sequelize} = require('../libraries').database;
 
-module.exports = sequelize.define('Tweet', {
+module.exports = sequelize.define('tweet', {
   id: {
     type: INTEGER(11),
     primaryKey: true,
@@ -11,7 +11,7 @@ module.exports = sequelize.define('Tweet', {
   },
   content: STRING(300),
   userId: {
-    type: Sequelize.INTEGER(11),
+    type: INTEGER(11),
     allowNull: false
   }
 });
