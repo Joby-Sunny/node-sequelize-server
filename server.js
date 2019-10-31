@@ -1,7 +1,10 @@
-const {express, bodyParser, chalk} = require('./libraries');
+const {express, bodyParser, chalk, database} = require('./libraries');
 const Routes = require('./routes');
 const app = express();
 const PORT = 4200;
+
+// create tables if not exist
+database.sequelize.sync()
 
 app.use(bodyParser.urlencoded({extended: false}));
 
